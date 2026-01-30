@@ -16,9 +16,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?=$pagetitle?></title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<?php require_once("assets/_header.php"); ?>
+<?php require_once("assets/_nav.php"); ?>
+
     
         <?php
     if(isLevel(100)){
@@ -26,7 +30,7 @@
     <form action="index.php" method="post">
         <input type="text" name="url" id="url" placeholder="Skriv url inklusive https://">
         <input type="text" name="desc" id="desc" placeholder="Beskrivning">
-        <input type="submit" value="Lägg till" name="btn">
+        <input type="submit" value="<?=$btnAdd?>" name="btn">
     </form>
 
  <?php 
@@ -40,6 +44,8 @@
  <h2>Du måste logga in!</h2>
  <a href="login.php">Login</a>
   <?php }  ?>
+
+<?php require_once("assets/_footer.php"); ?>
 
 </body>
 </html>

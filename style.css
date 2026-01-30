@@ -1,0 +1,51 @@
+@layers init, base, default, overrides;
+
+@layer init {
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height:100vh;
+    }
+    
+}
+
+@layer base {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+}
+@layer default {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    p{
+        margin-bottom: 15px;
+    }
+    form{
+        margin-bottom: 30px;
+        & input{
+            margin-right: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            &[type="text"], &[type="password"]{
+                width: 300px;
+            }
+            &[type="submit"]{
+                background-color: #28a745;
+                color: white;
+                border: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: #218838;
+                }
+            }
+        }
+    }
+}
