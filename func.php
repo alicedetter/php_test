@@ -5,7 +5,7 @@ require_once("lang/sv.php");
 
     $user="root";
     $pass="";
-    $db="phptest";
+    $db="php_test";
     $host="localhost";
     $conn=mysqli_connect($host, $user, $pass,$db) or die("DB unsuccessful!!");    
 

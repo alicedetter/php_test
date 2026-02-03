@@ -22,8 +22,6 @@
 <body>
 <?php require_once("assets/_header.php"); ?>
 <?php require_once("assets/_nav.php"); ?>
-
-    
         <?php
     if(isLevel(100)){
         echo "Välkommen, " . $_SESSION['user'] . "!"; ?>
@@ -32,6 +30,11 @@
         <input type="text" name="desc" id="desc" placeholder="Beskrivning">
         <input type="submit" value="<?=$btnAdd?>" name="btn">
     </form>
+
+<?php
+if(?><logout class="php">Logout</logout><?php){
+    session_destroy();
+}?>
 
  <?php 
     $sql="SELECT * FROM linx ORDER BY firstshown DESC";
@@ -44,7 +47,10 @@
  <h2>Du måste logga in!</h2>
  <a href="login.php">Login</a>
   <?php }  ?>
-
+    <?php
+    if(isLevel(1000)){
+        echo "Välkommen till adminpanelen, " . $_SESSION['user'] . "!";
+    } ?>
 <?php require_once("assets/_footer.php"); ?>
 
 </body>

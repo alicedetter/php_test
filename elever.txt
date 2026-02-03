@@ -1,0 +1,3 @@
+Peter, TE23, A
+Viola, TE21, A
+Greta, TeE24, B
